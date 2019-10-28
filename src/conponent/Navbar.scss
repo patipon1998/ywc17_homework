@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'TATSanaChon';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../font/TATSanaChon-Regular.woff2') format('woff2');
+}
+
+header {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 60px;
+    max-width: none !important;
+    padding: 0px;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+$screen-sm-min: 576px;
+
+@media only screen and (max-width: #{$screen-sm-min}) {
+    ._desktop-nav {
+        display: none;
+    }
+
+    .header-link-mobile {
+        display: block;
+
+        .navbar {
+            background: #fff;
+        }
+
+        .nav-light {
+            .navbar-light .navbar-brand {
+                color: rgba(0, 0, 0, 0.9);
+            }
+        }
+
+        .navbar-brand {
+            width: 35px;
+            height: 48px;
+            padding: 0;
+            display: inline-block;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            line-height: inherit;
+            white-space: nowrap;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+
+@media only screen and (min-width: #{$screen-sm-min + 1}) {
+    ._mobile-nav {
+        display: none;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+
+            .col-12 {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                .header-links {
+                    list-style: none;
+                    margin: 0;
+                    padding: 5px 0 0;
+                    text-align: center;
+
+                    li {
+                        display: inline-block;
+                        padding: 14px 15px;
+                        font-family: TATSanaChon;
+                        font-size: 14px;
+                        font-weight: bold;
+
+                        a {
+                            text-decoration: none;
+                            color: #333333;
+                            font-weight: bold;
+                            background-color: transparent;
+                            cursor: pointer;
+                            position: relative;
+                        }
+
+                        a::after {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 6px;
+                            bottom: -14px;
+                            left: 0;
+                            background-color: #213a8f;
+                            visibility: hidden;
+                            -webkit-transform: scaleX(0);
+                            transform: scaleX(0);
+                            -webkit-transition: all 0.3s ease-in-out 0s;
+                            transition: all 0.3s ease-in-out 0s;
+                        }
+
+                        a:hover {
+                            color: #213a8f;
+                        }
+
+                        a:hover:after {
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
