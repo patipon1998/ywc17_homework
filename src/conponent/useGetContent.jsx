@@ -18,7 +18,7 @@ const useGetContent = () => {
         axios
             .get(constant.APIPath)
             .then(res => {
-                const unwrappedRes = get(res, 'data', 'asldkfsdjf');
+                const unwrappedRes = get(res, 'data', {});
                 console.log('asdfsdfsdf', get(res, 'data'));
                 setContent(unwrappedRes);
             })

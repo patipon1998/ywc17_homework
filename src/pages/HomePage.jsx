@@ -1,5 +1,6 @@
 import React from 'react';
 import { get } from 'lodash';
+import parse from 'html-react-parser';
 
 import Navbar from '../conponent/Navbar';
 import useGetContent from '../conponent/useGetContent';
@@ -61,20 +62,34 @@ const HomePage = () => {
             <div className="detail-box">
                 <div className="detail-container">
                     <div className="row">
-                        <div className="col-md-10">
+                        <div class="col-md-10">
                             <div className="row">
-                                <div class="col-md-10">
-                                    <div className="row">
-                                        <div className="col-12"></div>
-                                        <div className="col-12 mt-4"></div>
-                                        <div className="col-12 mt 4 condition-box"></div>
+                                <div className="col-12">
+                                    <div className="head-title d-sm-block">
+                                        มาตรการส่งเสริมการบริโภค <br /> ในประเทศ{' '}
+                                        <span className="nowrap">
+                                            “ชิมช้อปใช้”
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="col-12 mt-4">
+                                    <div className="detail">
+                                        {parse(get(content, 'detail', ''))}
+                                    </div>
+                                </div>
+                                <div className="col-12 mt-4 condition-box">
+                                    <div className="title">
+                                        เงื่อนไขการเข้าร่วมมาตรการ
+                                    </div>
+                                    <div className="detail ul mt-2">
+                                        {parse(get(content, 'condition', ''))}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-3 col-lg-8"></div>
                     </div>
                 </div>
+                <div className="col-md-3 col-lg-8"></div>
             </div>
         </>
     );
