@@ -60,7 +60,20 @@ const HomePage = () => {
             </div>
             <div className="detail-box">
                 <div className="detail-container">
-                    <div className="row"></div>
+                    <div className="row">
+                        <div className="col-md-10">
+                            <div className="row">
+                                <div class="col-md-10">
+                                    <div className="row">
+                                        <div className="col-12"></div>
+                                        <div className="col-12 mt-4"></div>
+                                        <div className="col-12 mt 4 condition-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-lg-8"></div>
+                    </div>
                 </div>
             </div>
         </>
