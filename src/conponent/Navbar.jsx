@@ -5,11 +5,15 @@ import './Navbar.scss';
 import logoPic from '../img/logo_nav.png';
 
 const Navbar = props => {
-    const handleRenderNavItems = () => {
+    const handleRenderNavItems = size => {
         return map(props.navbarItems, item => {
             return (
-                <li>
-                    <a href={get(item, 'href', '')} target="_blank">
+                <li className={size === 'xs' ? 'nav-item' : ''}>
+                    <a
+                        href={get(item, 'href', '')}
+                        target="_blank"
+                        className={size === 'xs' ? 'nav-link' : ''}
+                    >
                         {get(item, 'label', '')}
                     </a>
                 </li>
@@ -24,6 +28,29 @@ const Navbar = props => {
                     <a className="navbar-brand" href="#">
                         <img src={logoPic} />
                     </a>
+                    <button
+                        className="navbar-toggler first-button collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent20"
+                        aria-controls="navbarSupportedContent20"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <div className="animated-icon1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    <div
+                        className="navbar-collapse collapse"
+                        id="navbarSupportedContent20"
+                    >
+                        <ul className="navbar-nav mr-auto">
+                            {handleRenderNavItems('xs')}
+                        </ul>
+                    </div>
                 </nav>
             </div>
             <div className="_desktop-nav container-fluid">

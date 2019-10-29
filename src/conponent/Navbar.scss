@@ -1,8 +1,15 @@
 @font-face {
     font-family: 'TATSanaChon';
-    font-style: normal;
-    font-weight: 500;
+    // font-style: normal;
+    // font-weight: 100;
     src: url('../font/TATSanaChon-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'TATSanaSuksa';
+    // font-style: normal;
+    // font-weight: 100;
+    src: url('../font/TATSanaSuksa-Regular.woff2') format('woff2');
 }
 
 header {
@@ -15,26 +22,31 @@ header {
     padding: 0px;
     margin-bottom: 60px;
     background-color: #fff;
+    line-height: 1.8;
 }
 
-$screen-sm-min: 576px;
-
-@media only screen and (max-width: #{$screen-sm-min}) {
+@media only screen and (max-width: 576px) {
     ._desktop-nav {
         display: none;
     }
 
     .header-link-mobile {
         display: block;
+        text-align: right;
+        cursor: pointer;
 
         .navbar {
             background: #fff;
         }
 
-        .nav-light {
-            .navbar-light .navbar-brand {
+        .navbar-light {
+            .navbar-brand {
                 color: rgba(0, 0, 0, 0.9);
             }
+            // .navbar-toggler {
+            //     color: rgba(0, 0, 0, 0.5);
+            //     border-color: rgba(0, 0, 0, 0.1);
+            // }
         }
 
         .navbar-brand {
@@ -56,28 +68,49 @@ $screen-sm-min: 576px;
         img {
             vertical-align: middle;
         }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        li {
+            font-family: 'TATSanaSuksa';
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        // .navbar-collapse {
+        //     -ms-flex-preferred-size: 100%;
+        //     flex-basis: 100%;
+        //     -ms-flex-positive: 1;
+        //     flex-grow: 1;
+        //     -ms-flex-align: center;
+        //     align-items: center;
+        // }
     }
 }
 
-@media only screen and (min-width: #{$screen-sm-min + 1}) {
+@media only screen and (min-width: 577px) {
     ._mobile-nav {
         display: none;
     }
 
     .container-fluid {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+        // width: 100%;
+        // padding-right: 15px;
+        // padding-left: 15px;
+        // margin-right: auto;
+        // margin-left: auto;
 
         .row {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
+            // display: -ms-flexbox;
+            // display: flex;
+            // -ms-flex-wrap: wrap;
+            // flex-wrap: wrap;
+            // margin-right: -15px;
+            // margin-left: -15px;
 
             .col-12 {
                 -ms-flex: 0 0 100%;
