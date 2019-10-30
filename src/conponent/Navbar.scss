@@ -1,3 +1,5 @@
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
 @font-face {
     font-family: 'TATSanaChon';
     // font-style: normal;
@@ -69,9 +71,9 @@ header {
             vertical-align: middle;
         }
 
-        .navbar-toggler {
-            border: none;
-        }
+        // .navbar-toggler {
+        //     border: none;
+        // }
 
         li {
             font-family: 'TATSanaSuksa';

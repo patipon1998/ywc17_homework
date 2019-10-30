@@ -1,8 +1,9 @@
 import React from 'react';
 import { map, get } from 'lodash';
 
-import './Navbar.scss';
 import logoPic from '../img/logo_nav.png';
+
+import './Navbar.scss';
 
 const Navbar = props => {
     const handleRenderNavItems = size => {
@@ -29,7 +30,7 @@ const Navbar = props => {
                         <img src={logoPic} />
                     </a>
                     <button
-                        className="navbar-toggler first-button collapsed"
+                        className="navbar-toggler first-button collapsed hamburger hamburger--elastic"
                         type="button"
                         data-toggle="collapse"
                         data-target="#navbarSupportedContent20"
@@ -37,11 +38,14 @@ const Navbar = props => {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <div className="animated-icon1">
+                        {/* <div className="animated-icon1">
                             <span></span>
                             <span></span>
                             <span></span>
-                        </div>
+                        </div> */}
+                        {/* <span className="hamburger-box">
+                            <span className="hamburger-inner" />
+                        </span> */}
                     </button>
                     <div
                         className="navbar-collapse collapse"
