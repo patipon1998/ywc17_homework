@@ -60,7 +60,7 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="detail-box">
-                <div className="detail-container">
+                <div className="container">
                     <div className="row">
                         <div class="col-md-10">
                             <div className="row">
