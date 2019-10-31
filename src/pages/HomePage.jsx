@@ -5,6 +5,7 @@ import parse from 'html-react-parser';
 import Navbar from '../conponent/Navbar';
 import Footer from '../conponent/Footer';
 import useGetContent from '../conponent/useGetContent';
+import constant from '../constant';
 
 import bannerLogo from '../img/banner.png';
 import bannerKTB from '../img/Banner_KTB_SQ.png';
@@ -23,7 +24,13 @@ const HomePage = () => {
     const content = useGetContent();
     return (
         <>
-            <Navbar navbarItems={get(content, 'navbarItems', [])} />
+            <Navbar
+                navbarItems={get(
+                    content,
+                    'navbarItems',
+                    get(constant.ywcJSON, 'navbarItems', [])
+                )}
+            />
             <div className="banner">
                 <div className="row no-gutters">
                     <div className="col-4 cover-img-1"></div>
@@ -47,7 +54,11 @@ const HomePage = () => {
                         </div>
                         <div className="col-12">
                             <div className="range-time">
-                                {get(content, 'duration', '')}
+                                {get(
+                                    content,
+                                    'duration',
+                                    get(constant.ywcJSON, 'duration', '')
+                                )}
                             </div>
                         </div>
                         <div className="col-12">
@@ -90,7 +101,17 @@ const HomePage = () => {
                                 </div>
                                 <div className="col-12 mt-4">
                                     <div className="detail">
-                                        {parse(get(content, 'detail', ''))}
+                                        {parse(
+                                            get(
+                                                content,
+                                                'detail',
+                                                get(
+                                                    constant.ywcJSON,
+                                                    'detail',
+                                                    ''
+                                                )
+                                            )
+                                        )}
                                     </div>
                                 </div>
                                 <div className="col-12 mt-4 condition-box">
@@ -98,7 +119,17 @@ const HomePage = () => {
                                         เงื่อนไขการเข้าร่วมมาตรการ
                                     </div>
                                     <div className="detail ul mt-2">
-                                        {parse(get(content, 'condition', ''))}
+                                        {parse(
+                                            get(
+                                                content,
+                                                'condition',
+                                                get(
+                                                    constant.ywcJSON,
+                                                    'condition',
+                                                    ''
+                                                )
+                                            )
+                                        )}
                                     </div>
                                 </div>
                             </div>
