@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { map, get } from 'lodash';
 
 import logoPic from '../img/logo_nav.png';
@@ -6,6 +6,8 @@ import logoPic from '../img/logo_nav.png';
 import './Navbar.scss';
 
 const Navbar = props => {
+    const [isOpen, setIsOpen] = useState(0);
+
     const handleRenderNavItems = size => {
         return map(props.navbarItems, item => {
             return (
@@ -29,24 +31,6 @@ const Navbar = props => {
                     <a className="navbar-brand" href="#">
                         <img src={logoPic} />
                     </a>
-                    {/* <button
-                        className="navbar-toggler first-button collapsed hamburger hamburger--elastic"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarSupportedContent20"
-                        aria-controls="navbarSupportedContent20"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    > */}
-                    {/* <div className="animated-icon1">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div> */}
-                    {/* <span className="hamburger-box">
-                            <span className="hamburger-inner" />
-                        </span> */}
-                    {/* </button> */}
                     <button
                         class="navbar-toggler first-button"
                         type="button"
@@ -55,8 +39,17 @@ const Navbar = props => {
                         aria-controls="navbarSupportedContent20"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
+                        onClick={() => {
+                            setIsOpen(!isOpen);
+                        }}
                     >
-                        <div class="animated-icon1">
+                        <div
+                            class={
+                                isOpen
+                                    ? 'animated-icon1 open'
+                                    : 'animated-icon1'
+                            }
+                        >
                             <span></span>
                             <span></span>
                             <span></span>
