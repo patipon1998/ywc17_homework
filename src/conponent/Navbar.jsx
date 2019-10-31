@@ -32,7 +32,7 @@ const Navbar = props => {
                         <img src={logoPic} />
                     </a>
                     <button
-                        class="navbar-toggler first-button"
+                        className="navbar-toggler first-button"
                         type="button"
                         data-toggle="collapse"
                         data-target="#navbarSupportedContent20"
@@ -44,7 +44,7 @@ const Navbar = props => {
                         }}
                     >
                         <div
-                            class={
+                            className={
                                 isOpen
                                     ? 'animated-icon1 open'
                                     : 'animated-icon1'
