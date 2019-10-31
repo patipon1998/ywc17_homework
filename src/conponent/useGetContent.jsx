@@ -19,12 +19,10 @@ const useGetContent = () => {
             .get(constant.APIPath)
             .then(res => {
                 const unwrappedRes = get(res, 'data', constant.ywcJSON);
-                console.log('asdfsdfsdf', get(res, 'datsdfa', {}));
                 setContent(unwrappedRes);
             })
             .catch(() => {
                 setContent(constant.ywcJSON);
-                console.log('catch');
             });
     }, []);
 
