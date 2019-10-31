@@ -29,7 +29,7 @@ const Navbar = props => {
                     <a className="navbar-brand" href="#">
                         <img src={logoPic} />
                     </a>
-                    <button
+                    {/* <button
                         className="navbar-toggler first-button collapsed hamburger hamburger--elastic"
                         type="button"
                         data-toggle="collapse"
@@ -37,15 +37,30 @@ const Navbar = props => {
                         aria-controls="navbarSupportedContent20"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
-                    >
-                        {/* <div className="animated-icon1">
+                    > */}
+                    {/* <div className="animated-icon1">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div> */}
-                        {/* <span className="hamburger-box">
+                    {/* <span className="hamburger-box">
                             <span className="hamburger-inner" />
                         </span> */}
+                    {/* </button> */}
+                    <button
+                        class="navbar-toggler first-button"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent20"
+                        aria-controls="navbarSupportedContent20"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <div class="animated-icon1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </button>
                     <div
                         className="navbar-collapse collapse"

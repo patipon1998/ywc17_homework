@@ -1,4 +1,4 @@
-@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+// @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
 @font-face {
     font-family: 'TATSanaChon';
@@ -25,6 +25,10 @@ header {
     margin-bottom: 60px;
     background-color: #fff;
     line-height: 1.8;
+    font-family: 'TATSanaSuksa';
+    font-size: 16px;
+    color: #333333;
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 576px) {
@@ -71,17 +75,22 @@ header {
             vertical-align: middle;
         }
 
-        // .navbar-toggler {
-        //     border: none;
-        // }
-
-        li {
-            font-family: 'TATSanaSuksa';
-            font-size: 16px;
-            color: #333333;
-            line-height: 1.8;
-            font-weight: 400;
+        .navbar-toggler {
+            border: none;
         }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:hover {
+            text-decoration: none;
+        }
+
+        // li {
+        //     font-family: 'TATSanaSuksa';
+        //     font-size: 16px;
+        //     color: #333333;
+        //     line-height: 1.8;
+        //     font-weight: 400;
+        // }
 
         // .navbar-collapse {
         //     -ms-flex-preferred-size: 100%;
@@ -115,9 +124,9 @@ header {
             // margin-left: -15px;
 
             .col-12 {
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-                max-width: 100%;
+                // -ms-flex: 0 0 100%;
+                // flex: 0 0 100%;
+                // max-width: 100%;
 
                 .header-links {
                     list-style: none;
