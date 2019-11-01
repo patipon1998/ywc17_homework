@@ -9,13 +9,13 @@ const Navbar = props => {
     const [isOpen, setIsOpen] = useState(0);
 
     const handleRenderNavItems = size => {
-        return map(props.navbarItems, item => {
+        return map(props.navbarItems, (item, index) => {
             return (
-                <li className={size === 'xs' && 'nav-item'}>
+                <li className={size === 'xs' ? 'nav-item' : null} key={index}>
                     <a
                         href={get(item, 'href', '')}
                         target="_blank"
-                        className={size === 'xs' && 'nav-link'}
+                        className={size === 'xs' ? 'nav-link' : null}
                     >
                         {get(item, 'label', '')}
                     </a>
