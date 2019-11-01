@@ -1,19 +1,14 @@
 @font-face {
     font-family: 'TATSanaSuksaBold';
-    // font-style: normal;
-    // font-weight: 100;
     src: url('../font/TATSanaChon-Bold.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'TATSanaSuksa';
-    // font-style: normal;
-    // font-weight: 100;
     src: url('../font/TATSanaSuksa-Regular.woff2') format('woff2');
 }
 
 @mixin default-font {
-    // font-family: 'TATSanaSuksaBold';
     text-align: center;
     font-weight: bold;
     font-size: 16px;
@@ -35,7 +30,6 @@
     }
 
     .cover-img-2 {
-        // @include img-banner;
         .logo-box {
             padding: 20px;
             width: 280px;
@@ -151,24 +145,6 @@ span.nowrap {
     }
 }
 
-// img {
-//     vertical-align: middle;
-//     border-style: none;
-// }
-// .detail-container {
-//     width: 100%;
-//     padding-right: 15px;
-//     padding-left: 15px;
-//     margin-right: auto;
-//     margin-left: auto;
-// }
-
-// @media only screen and (min-width: 577px) {
-//     .detail-container {
-//         max-width: 540px;
-//     }
-// }
-
 @media only screen and (max-width: 769px) {
     .banner {
         .cover-img-1,
@@ -213,14 +189,10 @@ span.nowrap {
         }
     }
 
-    // .detail-box,
-    // .tat-box,
-    // .logo-box {
     .container {
         padding-right: 30px;
         padding-left: 30px;
     }
-    // }
 }
 
 @media only screen and (max-width: 576px) {
@@ -248,7 +220,7 @@ span.nowrap {
     }
 
     .cover-img-3 {
-        background: url(../img//banner-right-s.png) no-repeat;
+        background: url(../img/banner-right-s.png) no-repeat;
     }
 
     .reg-box {
@@ -261,11 +233,6 @@ span.nowrap {
             width: 100%;
         }
     }
-
-    // .detail-container {
-    //     padding-right: 30px;
-    //     padding-left: 30px;
-    // }
 
     .detail-box {
         .head-title {
