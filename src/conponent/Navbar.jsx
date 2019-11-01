@@ -11,11 +11,11 @@ const Navbar = props => {
     const handleRenderNavItems = size => {
         return map(props.navbarItems, item => {
             return (
-                <li className={size === 'xs' ? 'nav-item' : ''}>
+                <li className={size === 'xs' && 'nav-item'}>
                     <a
                         href={get(item, 'href', '')}
                         target="_blank"
-                        className={size === 'xs' ? 'nav-link' : ''}
+                        className={size === 'xs' && 'nav-link'}
                     >
                         {get(item, 'label', '')}
                     </a>
